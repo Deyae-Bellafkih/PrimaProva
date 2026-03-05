@@ -46,6 +46,18 @@ public class HelloController {
     }
 
     @FXML
+    protected void onCercaClick() {
+
+        String valore = txtCerca.getText();
+
+        if (lista.cerca(valore)) {
+            txtOutput.setText("Elemento trovato!\n");
+        } else {
+            txtOutput.setText("Elemento non trovato.\n");
+        }
+    }
+
+    @FXML
     protected void onModificaClick() {
 
         String vecchio = txtCerca.getText();
